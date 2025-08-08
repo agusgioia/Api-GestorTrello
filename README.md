@@ -17,21 +17,7 @@ Este es el backend del proyecto **Trello Clone**, desarrollado con **Spring Boot
 
 La aplicación utiliza una única variable de entorno para configurar el acceso a Firestore:
 
-- `FIREBASE_CREDENTIALS_BASE64`: contiene el contenido **base64** del archivo JSON de credenciales de Firebase.
-
-> ⚠️ **Importante:** Nunca subas las credenciales al repositorio. En su lugar, convierte el archivo JSON en una cadena base64 y asígnala como variable de entorno.
-
-Ejemplo en Linux/macOS para generar el valor:
-
-```bash
-base64 -w 0 serviceAccountKey.json
-```
-
-Y luego agregarla como variable de entorno:
-
-```bash
-export FIREBASE_CREDENTIALS_BASE64="eyJ0eXAiOiJKV1QiLCJhbGciOi..."
-```
+- `FIREBASE_CREDENTIALS_BASE64`: contiene el contenido archivo JSON de credenciales de Firebase.
 
 ## Construcción y ejecución
 
@@ -97,6 +83,3 @@ Este backend puede desplegarse en plataformas como **Render**, **Railway**, **He
 - Definir `FIREBASE_CREDENTIALS_BASE64` como variable de entorno en el entorno de despliegue.
 - Exponer el puerto 8080 o el configurado en la aplicación.
 
-## Licencia
-
-Este proyecto es de uso libre con fines educativos.
